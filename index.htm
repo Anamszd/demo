@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .catImg{
+            width: 300px;
+        }
+
+        .catZoomIn{
+            width: 320px;
+        }
+    </style>
+</head>
+<body>
+    <img src="./pexels-pixabay-45201.jpg" alt="img" class="catImg" id="catImgId"><br/>
+    <button id="zoomIn">Zoom In</button>
+    <button id="zoomOut">Zoom out</button>
+
+
+    <script type="text/javascript">
+        let zoomIn = document.getElementById("zoomIn");
+        let zoomOut = document.getElementById("zoomOut");
+        let catImgId = document.getElementById("catImgId");
+
+        let currentWidth = 300;
+        let increment = 20;
+
+        zoomIn.onclick = function(){
+            currentWidth += increment;
+            catImgId.style.width = currentWidth + "px";
+        }
+
+        zoomOut.onclick = function(){
+            currentWidth -= increment;
+            catImgId.style.width = currentWidth + "px";
+        }
+    </script>
+
+
+</body>
+</html>
